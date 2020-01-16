@@ -21,9 +21,9 @@ namespace Task2.Tests
         [Timeout(3000)]
         [Order(3)]
         [TestCase(10927782, -6902514, ExpectedResult = 846)]
-        [TestCase(-1590771464, 1590771620, ExpectedResult = 4)]
+        [TestCase(-1590771464, 1590771620, ExpectedResult = 4)] //timeout
         [TestCase(-10234562, -7872334, ExpectedResult = 2)]
-        [TestCase(1590771464, -1590771620, ExpectedResult = 4)]
+        [TestCase(1590771464, -1590771620, ExpectedResult = 4)] //timeout
         [TestCase(-10234567, -234568989, ExpectedResult = 97)]
         public int GcdTests_WithSomeNegativeNumbers(int a, int b) => GetGcd(a, b);
 

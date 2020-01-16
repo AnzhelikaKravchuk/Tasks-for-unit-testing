@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2</name>
+    </assembly>
+    <members>
+        <member name="T:Task2.IntegerExtensions">
+            <summary>
+            This class contains GetGcd method.
+            </summary>
+        </member>
+        <member name="M:Task2.IntegerExtensions.GetGcd(System.Int32,System.Int32)">
+            <summary>
+            This method counts the greatest common divisor of two integers.
+            </summary>
+            <param name="a">First integer.</param>
+            <param name="b">Second integer.</param>
+            <returns>This method returns the greatest common divisor.</returns>
+            <exception cref="T:System.ArgumentException">Both numbers cannot be equal zero.</exception>
+        </member>
+    </members>
+</doc>
