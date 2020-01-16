@@ -3,12 +3,12 @@
 namespace Task2
 {
     /// <summary>
-    /// The main class which have been testing.
+    /// The main class of Task2 about searching GCD of two numbers.
     /// </summary>
     public static class IntegerExtensions
     {
         /// <summary>
-        /// Method for finding the greatest common divisor of two integers.
+        /// Method The method that searches for the greatest common divisor of two integers.
         /// </summary>
         /// <param name="a"> Number 1. </param>
         /// <param name="b"> Number 2. </param>
@@ -18,10 +18,17 @@ namespace Task2
         {
             if (a == 0 && b == 0)
             {
-                throw new ArgumentException("Two numbers cannot be 0 at the same time.");
+                throw new ArgumentException("${nameof(a)} and {nameof(b)} cannot be 0 at the same time.");
             }
 
-            return b == 0 ? Math.Abs(a) : GetGcd(b, a % b);
+            while (b != 0)
+            {
+                var temp = b;
+                b = a % b;
+                a = temp;
+            }
+
+            return Math.Abs(a);
         }
     }
 }
