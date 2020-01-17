@@ -29,6 +29,16 @@ namespace Task2
             first = Math.Abs(first);
             second = Math.Abs(second);
             int gcd = 1;
+            if (first == 0 || second == 0)
+            {
+                gcd = (int)(first + second);
+            }
+
+            if (first == 0 && second == 0)
+            {
+                throw new ArgumentException("Two numbers cannot be 0 at the same time.");
+            }
+
             while (first != 0 & second != 0)
             {
                 if (first > second)
@@ -49,16 +59,6 @@ namespace Task2
                         break;
                     }
                 }
-            }
-
-            if (first == 0 || second == 0)
-            {
-                gcd = (int)(first + second);
-            }
-
-            if (first == 0 && second == 0)
-            {
-                throw new ArgumentException("Two numbers cannot be 0 at the same time.");
             }
 
             return gcd;
