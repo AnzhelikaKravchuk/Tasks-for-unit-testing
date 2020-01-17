@@ -27,12 +27,12 @@ namespace Task1
             int sum = 0;
             if (str == null)
             {
-                throw new ArgumentNullException(str, "String cannot be null.");
+                throw new ArgumentNullException(nameof(str), "String cannot be null.");
             }
 
             if (str.Length == 0)
             {
-                throw new ArgumentException("String cannot be empty.", str);
+                throw new ArgumentException("String cannot be empty.", nameof(str));
             }
 
             foreach (char letter in str)
