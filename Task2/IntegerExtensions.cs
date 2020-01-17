@@ -28,10 +28,10 @@ namespace Task2
             long second = b;
             first = Math.Abs(first);
             second = Math.Abs(second);
-            int gcd = 1;
+            long gcd = 1;
             if (first == 0 || second == 0)
             {
-                gcd = (int)(first + second);
+                gcd = first + second;
             }
 
             if (first == 0 && second == 0)
@@ -46,7 +46,7 @@ namespace Task2
                     first %= second;
                     if (first == 0)
                     {
-                        gcd = (int)second;
+                        gcd = second;
                         break;
                     }
                 }
@@ -55,13 +55,18 @@ namespace Task2
                     second %= first;
                     if (second == 0)
                     {
-                        gcd = (int)first;
+                        gcd = first;
                         break;
                     }
                 }
             }
 
-            return gcd;
+            if (gcd > int.MaxValue)
+            {
+                throw new ArgumentException("Too big return value ");
+            }
+
+            return (int)gcd;
         }
     }
 }

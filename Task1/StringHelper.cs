@@ -24,7 +24,6 @@ namespace Task1
         /// </exception>
         public static int GetVowelCount(string str)
         {
-            int sum = 0;
             if (str == null)
             {
                 throw new ArgumentNullException(nameof(str), "String cannot be null.");
@@ -35,6 +34,7 @@ namespace Task1
                 throw new ArgumentException("String cannot be empty.", nameof(str));
             }
 
+            int sum = 0;
             foreach (char letter in str)
                 {
                     if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
