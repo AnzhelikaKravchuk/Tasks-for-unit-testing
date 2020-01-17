@@ -30,12 +30,9 @@ namespace Task1
             string vowels = "aouei";
             for (int i = 0; i < str.Length; i++)
             {
-                for (int j = 0; j < vowels.Length; j++)
+                if (vowels.Contains(str[i], StringComparison.Ordinal))
                 {
-                    if (str[i] == vowels[j])
-                    {
-                        ret++;
-                    }
+                    ret++;
                 }
             }
 
