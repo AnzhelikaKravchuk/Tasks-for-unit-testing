@@ -24,24 +24,24 @@ namespace Task1
         /// </exception>
         public static int GetVowelCount(string str)
         {
+            int sum = 0;
             if (str == null)
             {
-                throw new ArgumentNullException(str);
-            }
-            else if (str.Length == 0)
-            {
-                throw new ArgumentException("String cannot be empty.");
+                throw new ArgumentNullException(str, "String cannot be null.");
             }
 
-            int sum = 0;
-            char[] letters = str.ToCharArray();
-            foreach (char letter in letters)
+            if (str.Length == 0)
             {
-                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
-                {
-                    sum++;
-                }
+                throw new ArgumentException("String cannot be empty.", str);
             }
+
+            foreach (char letter in str)
+                {
+                    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+                    {
+                        sum++;
+                    }
+                }
 
             return sum;
         }
