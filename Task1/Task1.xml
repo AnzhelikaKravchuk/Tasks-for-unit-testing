@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task1</name>
+    </assembly>
+    <members>
+        <member name="T:Task1.StringHelper">
+            <summary>
+            This class finds amount of vowels in strings.
+            </summary>
+        </member>
+        <member name="M:Task1.StringHelper.GetVowelCount(System.String)">
+            <summary>
+            This method counts amount fo vowels in the string.
+            </summary>
+            <param name="str">String, where you want to count vowels.</param>
+            <returns>Amount of vowels in string.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the string is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the string is empty.</exception>
+        </member>
+    </members>
+</doc>
