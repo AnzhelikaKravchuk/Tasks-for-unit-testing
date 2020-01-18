@@ -1,9 +1,19 @@
-using System;
+﻿using System;
 
 namespace Task2
 {
+    /// <summary>
+    /// Class for getting GCD method.
+    /// </summary>
     public static class IntegerExtensions
     {
+        /// <summary>
+        /// Method for getting GCD of two numbers.
+        /// </summary>
+        /// <param name="a">the first nubmer.</param>
+        /// <param name="b">the second number.</param>
+        /// <exception cref="ArgumentException">Throw when both numbers are zero.</exception>
+        /// <returns>GCD.</returns>
         public static int GetGcd(int a, int b)
         {
             if (a == 0 & b == 0)
@@ -21,7 +31,7 @@ namespace Task2
                 return Math.Abs(a);
             }
 
-            for (; ;)
+            while (true)
             {
                 if ((a %= b) == 0)
                 {
@@ -33,8 +43,6 @@ namespace Task2
                     return Math.Abs(a);
                 }
             }
-
-            throw new NotImplementedException();
         }
     }
 }

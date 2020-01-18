@@ -2,8 +2,18 @@
 
 namespace Task1
 {
+    /// <summary>
+    /// Main class of the program for getting nubmer of vowels method.
+    /// </summary>
     public static class StringHelper
     {
+        /// <summary>
+        /// Method for getting count of vowel in string.
+        /// </summary>
+        /// <param name="str">Source string.</param>
+        /// <exception cref="ArgumentNullException">Throw when string is null.</exception>
+        /// <exception cref="ArgumentException">Throw when string has no characters.</exception>
+        /// <returns>Nubmer of vowels.</returns>
         public static int GetVowelCount(string str)
         {
             if (str == null)
@@ -31,7 +41,6 @@ namespace Task1
             }
 
             return count;
-            throw new NotImplementedException();
         }
     }
 }
