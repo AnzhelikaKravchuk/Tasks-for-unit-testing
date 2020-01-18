@@ -18,12 +18,12 @@ namespace Task1
         {
             if (str is null)
             {
-                throw new ArgumentNullException(str, "String you pass cannot be null.");
+                throw new ArgumentNullException(nameof(str), "String you pass cannot be null.");
             }
 
             if (str.Length == 0)
             {
-                throw new ArgumentException("Argument cannot be an empty string.", str);
+                throw new ArgumentException("Argument cannot be an empty string.", nameof(str));
             }
 
             int vowel_counter = 0;
