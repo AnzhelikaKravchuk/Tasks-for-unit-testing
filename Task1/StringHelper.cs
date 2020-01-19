@@ -20,7 +20,6 @@ namespace Task1
         /// <returns>Number of vowels in a string.  </returns>
         public static int GetVowelCount(string str)
         {
-            int result = 0;
             if (str == null)
             {
                 throw new ArgumentNullException(nameof(str));
@@ -28,35 +27,19 @@ namespace Task1
 
             if (str.Length == 0)
             {
-                throw new ArgumentException("hthtr");
+                throw new ArgumentException("String cannot be empty.");
             }
 
+            int result = 0;
             foreach (char symbol in str)
             {
-                if (symbol == 'a')
-                {
-                    result++;
-                }
-                else if (symbol == 'e')
-                {
-                    result++;
-                }
-                else if (symbol == 'i')
-                {
-                    result++;
-                }
-                else if (symbol == 'o')
-                {
-                    result++;
-                }
-                else if (symbol == 'u')
+                if (symbol == 'a' || symbol == 'e' || symbol == 'i' || symbol == 'o' || symbol == 'u')
                 {
                     result++;
                 }
             }
 
             return result;
-            throw new NotImplementedException();
         }
     }
 }

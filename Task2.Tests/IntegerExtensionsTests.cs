@@ -17,7 +17,7 @@ namespace Task2.Tests
         [Order(1)]
         public int GcdTests_WithAllPositiveNumbers(int a, int b) => GetGcd(a, b);
 
-        
+
         [Timeout(3000)]
         [Order(3)]
         [TestCase(10927782, -6902514, ExpectedResult = 846)]
@@ -40,6 +40,11 @@ namespace Task2.Tests
         [Timeout(10000)]
         [Order(5)]
         public int GcdTest_WithMaxAndMinIntegerNumbers(int a, int b) => GetGcd(a, b);
+
+        [Test, Order(6)]
+        public void GcdTest_WithZeroAndMinIntegerNumbers_ThrowOverflowException() =>
+             Assert.Throws<OverflowException>(() => GetGcd(int.MinValue, 0),
+                 "Going beyond integer type");
 
         [Test, Order(2)]
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>

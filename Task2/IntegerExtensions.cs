@@ -1,4 +1,4 @@
-// <copyright file="IntegerExtensions.cs" company="PlaceholderCompany">
+﻿// <copyright file="IntegerExtensions.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -7,7 +7,7 @@ namespace Task2
     using System;
 
     /// <summary >
-    /// �lass StringHelper.
+    /// Сlass StringHelper.
     /// </summary >
     public static class IntegerExtensions
     {
@@ -33,8 +33,6 @@ namespace Task2
             {
                 return GetGcd(b, a % b);
             }
-
-            throw new NotImplementedException();
         }
     }
 }
