@@ -16,6 +16,11 @@ namespace Task2
         /// <exception cref="ArgumentException">Thrown when both parameters equal to zero.</exception>
         public static int GetGcd(int a, int b)
         {
+            if (Math.Max(a, b) == 0 && Math.Min(a, b) == int.MinValue)
+            {
+                throw new OverflowException("OverFlow_NegateTwosCompNum");
+            }
+
             long ua = Math.Abs((long)a);
             long ub = Math.Abs((long)b);
             if (ua == 0 && ub == 0)

@@ -45,5 +45,9 @@ namespace Task2.Tests
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => GetGcd(0, 0),
                 "Two numbers cannot be 0 at the same time.");
+        [Test]
+        public void GcdTest_WithMinIntegerAndZero_ThrowOverFlowException() =>
+            Assert.Throws<OverflowException>(() => GetGcd(int.MinValue, 0),
+                "OverFlow_NegateTwosCompNum");
     }
 }
