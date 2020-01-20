@@ -13,7 +13,7 @@ namespace Task1
         /// <param name="str">Source string.</param>
         /// <exception cref="ArgumentNullException">Throw when string is null.</exception>
         /// <exception cref="ArgumentException">Throw when string has no characters.</exception>
-        /// <returns>Nubmer of vowels.</returns>
+        /// <returns>Number of vowels.</returns>
         public static int GetVowelCount(string str)
         {
             if (str == null)

@@ -4,5 +4,19 @@
         <name>Task1</name>
     </assembly>
     <members>
+        <member name="T:Task1.StringHelper">
+            <summary>
+            Main class of the program for getting nubmer of vowels method.
+            </summary>
+        </member>
+        <member name="M:Task1.StringHelper.GetVowelCount(System.String)">
+            <summary>
+            Method for getting count of vowel in string.
+            </summary>
+            <param name="str">Source string.</param>
+            <exception cref="T:System.ArgumentNullException">Throw when string is null.</exception>
+            <exception cref="T:System.ArgumentException">Throw when string has no characters.</exception>
+            <returns>Number of vowels.</returns>
+        </member>
     </members>
 </doc>
