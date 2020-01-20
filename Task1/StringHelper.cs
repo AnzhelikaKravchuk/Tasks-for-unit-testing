@@ -1,5 +1,4 @@
-﻿#pragma warning disable SA1503
-using System;
+﻿using System;
 
 namespace Task1
 {
@@ -17,15 +16,23 @@ namespace Task1
         /// <exception cref="System.ArgumentNullException">Thrown when string is null.</exception>
         public static int GetVowelCount(string str)
         {
-            if (str == null) throw new ArgumentNullException(nameof(str), "String cannot be null.");
+            if (str == null)
+            {
+                throw new ArgumentNullException(nameof(str), "String cannot be null.");
+            }
 
-            if (str.Length == 0) throw new ArgumentException("String cannot be empty.");
+            if (str.Length == 0)
+            {
+                throw new ArgumentException("String cannot be empty.", nameof(str));
+            }
 
             int count = 0;
             for (int i = 0; i < str.Length; i++)
             {
-                if ((str[i] == 'a') || (str[i] == 'e') || (str[i] == 'i') || (str[i] == 'o') || (str[i] == 'u'))
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+                {
                     count++;
+                }
             }
 
             return count;
