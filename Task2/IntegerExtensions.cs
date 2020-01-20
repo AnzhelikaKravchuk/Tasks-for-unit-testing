@@ -8,7 +8,7 @@ namespace Task2
     public static class IntegerExtensions
     {
         /// <summary>
-        /// Algorithm for finding the GCD of two integers.
+        /// Algorithm for finding the GCD of two integers in the range of int.MinValue + 1 to int.MaxValue.
         /// </summary>
         /// <param name="a">Firrst int number.</param>
         /// <param name="b">Second int number.</param>
