@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using static Task2.IntegerExtensions;
 
@@ -17,7 +17,7 @@ namespace Task2.Tests
         [Order(1)]
         public int GcdTests_WithAllPositiveNumbers(int a, int b) => GetGcd(a, b);
 
-        
+
         [Timeout(3000)]
         [Order(3)]
         [TestCase(10927782, -6902514, ExpectedResult = 846)]
@@ -41,9 +41,15 @@ namespace Task2.Tests
         [Order(5)]
         public int GcdTest_WithMaxAndMinIntegerNumbers(int a, int b) => GetGcd(a, b);
 
+        [Test, Order(6)]
+        public void GcdTest_WithZeroAndMinIntegerNumbers_ThrowOverflowException() =>
+             Assert.Throws<ArgumentException>(() => GetGcd(int.MinValue, 0),
+                 "Going beyond the value of type Int");
+
         [Test, Order(2)]
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => GetGcd(0, 0),
                 "Two numbers cannot be 0 at the same time.");
+
     }
 }

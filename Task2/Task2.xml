@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2</name>
+    </assembly>
+    <members>
+        <member name="T:Task2.IntegerExtensions">
+            <summary >
+            Сlass StringHelper.
+            </summary >
+        </member>
+        <member name="M:Task2.IntegerExtensions.GetGcd(System.Int32,System.Int32)">
+            <summary >
+            Algorith of finding the GCD of two integer.
+            </summary >
+            <param  name = " a " > First int number. </param >
+            <param  name = " b " > Second int number. </param >
+            <exception cref="T:System.ArgumentException">Two numbers are equal 0 at the same time.</exception>
+            <returns>GCD of two integer.  </returns>
+        </member>
+    </members>
+</doc>
