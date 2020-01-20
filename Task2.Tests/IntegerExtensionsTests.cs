@@ -14,12 +14,11 @@ namespace Task2.Tests
         [TestCase(2672, 5678, ExpectedResult = 334)]
         [TestCase(10927782, 6902514, ExpectedResult = 846)]
         [TestCase(1590771464, 1590771620, ExpectedResult = 4)]
-        [Order(1)]
+        [Order(4)]
         public int GcdTests_WithAllPositiveNumbers(int a, int b) => GetGcd(a, b);
 
-        
         [Timeout(3000)]
-        [Order(3)]
+        [Order(5)]
         [TestCase(10927782, -6902514, ExpectedResult = 846)]
         [TestCase(-1590771464, 1590771620, ExpectedResult = 4)]
         [TestCase(-10234562, -7872334, ExpectedResult = 2)]
@@ -38,12 +37,22 @@ namespace Task2.Tests
         [TestCase(int.MaxValue, int.MinValue, ExpectedResult = 1)]
         [Property("Mark", 2)]
         [Timeout(10000)]
-        [Order(5)]
+        [Order(6)]
         public int GcdTest_WithMaxAndMinIntegerNumbers(int a, int b) => GetGcd(a, b);
 
-        [Test, Order(2)]
+        [Test, Order(3)]
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => GetGcd(0, 0),
                 "Two numbers cannot be 0 at the same time.");
+        
+        [Test, Order(1)]
+        public void GcdTest_WithZeroAndIntMinNumbers_ThrowArgumentException() =>
+            Assert.Throws<ArgumentException>(() => GetGcd(int.MinValue, 0),
+                "Two numbers cannot be 0 and int.MinValue at the same time.");
+
+        [Test, Order(2)]
+        public void GcdTest_WithIntMinAndZeroNumbers_ThrowArgumentException() =>
+            Assert.Throws<ArgumentException>(() => GetGcd(0, int.MinValue),
+                "Two numbers cannot be int.MinValue and 0 at the same time.");
     }
 }
