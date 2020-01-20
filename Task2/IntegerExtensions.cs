@@ -25,14 +25,20 @@ namespace Task2
                 throw new ArgumentException("Two numbers cannot be 0 at the same time.");
             }
 
-            if (b == 0)
+            if (a == int.MinValue && b == 0)
             {
-                return Math.Abs(a);
+                throw new ArgumentException("Going beyond the value of type Int");
             }
-            else
+
+            while (b != 0)
             {
-                return GetGcd(b, a % b);
+                a %= b;
+                int remainder = a;
+                a = b;
+                b = remainder;
             }
+
+            return Math.Abs(a);
         }
     }
 }

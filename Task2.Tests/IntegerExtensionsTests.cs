@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using static Task2.IntegerExtensions;
 
@@ -43,12 +43,13 @@ namespace Task2.Tests
 
         [Test, Order(6)]
         public void GcdTest_WithZeroAndMinIntegerNumbers_ThrowOverflowException() =>
-             Assert.Throws<OverflowException>(() => GetGcd(int.MinValue, 0),
-                 "Going beyond integer type");
+             Assert.Throws<ArgumentException>(() => GetGcd(int.MinValue, 0),
+                 "Going beyond the value of type Int");
 
         [Test, Order(2)]
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => GetGcd(0, 0),
                 "Two numbers cannot be 0 at the same time.");
+
     }
 }
