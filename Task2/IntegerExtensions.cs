@@ -9,7 +9,7 @@ namespace Task2
     public static class IntegerExtensions
     {
         /// <summary>
-        /// Finds the great common divisor of two integer numbers.
+        /// Finds the great common divisor of two integer numbers in range (int.MinValue;int.MaxValue].
         /// </summary>
         /// <param name="a">First integer number to find the great common divisor.</param>
         /// <param name="b">Second integer number to find the great common divisor.</param>
