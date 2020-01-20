@@ -19,14 +19,14 @@ namespace Task2
         /// </returns>
         public static int GetGcd(int a, int b)
         {
+            if (a == int.MinValue || b == int.MinValue)
+            {
+                throw new ArgumentException("int.MinValue is not in an allowable range (int.MinValue;int.MaxValue]");
+            }
+
             if (a == 0 && b == 0)
             {
                 throw new ArgumentException("Two numbers cannot be 0 at the same time.");
-            }
-
-            if ((a == int.MaxValue && b == int.MinValue) || (a == int.MinValue && b == int.MinValue))
-            {
-                return 1;
             }
 
             a = Math.Abs(a);
