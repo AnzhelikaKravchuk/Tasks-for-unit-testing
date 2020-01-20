@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task1</name>
+    </assembly>
+    <members>
+        <member name="T:Task1.StringHelper">
+            <summary>
+            The StringHelper class.
+            Contains all methods for examining string.
+            </summary>
+        </member>
+        <member name="M:Task1.StringHelper.GetVowelCount(System.String)">
+            <summary>
+            Counts how many vowels are there in the input string.
+            </summary>
+            <param name="str">Input string for examining.</param>
+            <exception cref="M:System.ArgumentNullException.#ctor">Thrown when input string is null.</exception>
+            <exception cref="M:System.ArgumentException.#ctor">Thrown when input string is empty.</exception>
+            <returns>
+            Amount of vowels in the input string.
+            </returns>
+        </member>
+    </members>
+</doc>

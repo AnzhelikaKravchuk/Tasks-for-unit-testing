@@ -31,15 +31,15 @@ namespace Task2.Tests
         [TestCase(0, -301, ExpectedResult = 301)]
         [TestCase(10927782, 0, ExpectedResult = 10927782)]
         [TestCase(-1590771464, 0, ExpectedResult = 1590771464)]
+        [TestCase(int.MaxValue, 0, ExpectedResult = int.MaxValue)]
         [Timeout(3000)]
         [Order(4)]
         public int GcdTests_WithOneZeroNumber(int a, int b) => GetGcd(a, b);
 
-        [TestCase(int.MaxValue, int.MinValue, ExpectedResult = 1)]
-        [Property("Mark", 2)]
-        [Timeout(10000)]
-        [Order(5)]
-        public int GcdTest_WithMaxAndMinIntegerNumbers(int a, int b) => GetGcd(a, b);
+        [Test, Order(5)]
+        public void GcdTest_WithMinIntegerNumber_ThrowArgumentException() =>
+            Assert.Throws<ArgumentException>(() => GetGcd(int.MaxValue, int.MinValue),
+                    "int.MinValue is not in an allowable range (int.MinValue;int.MaxValue]");
 
         [Test, Order(2)]
         public void GcdTest_WithTwoZeroNumbers_ThrowArgumentException() =>

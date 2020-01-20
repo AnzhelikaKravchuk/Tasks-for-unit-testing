@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2</name>
+    </assembly>
+    <members>
+        <member name="T:Task2.IntegerExtensions">
+            <summary>
+            The IntegerExtensions class.
+            Contains method for finding the great common divisor.
+            </summary>
+        </member>
+        <member name="M:Task2.IntegerExtensions.GetGcd(System.Int32,System.Int32)">
+            <summary>
+            Finds the great common divisor of two integer numbers in range (int.MinValue;int.MaxValue].
+            </summary>
+            <param name="a">First integer number to find the great common divisor.</param>
+            <param name="b">Second integer number to find the great common divisor.</param>
+            <exception cref="M:System.ArgumentException.#ctor">Thrown when both numbers are 0 at the same time.</exception>
+            <returns>
+            The great common divisor of two integer numbers.
+            </returns>
+        </member>
+    </members>
+</doc>
